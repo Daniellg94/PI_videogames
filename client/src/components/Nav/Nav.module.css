@@ -1,0 +1,9 @@
+.Navcont{
+    background-color: green;
+    border-radius: 15px ;
+    border: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    border: 1px solid;
+}

@@ -10,14 +10,20 @@ const URL_NAME = "https://api.rawg.io/api/games";
 const getGameById = async (req, res) => {
   try {
     const { id } = req.params;
+
+    function isUUID(value) {
+      const uuidRegex = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+      return uuidRegex.test(value);}
     //busca con la primary key el id pasado por parametros
+  if(isUUID(id)){
     const dbGames = await Videogame.findByPk(id,{include:{model:Genres}})
   
-
+  // si la encuentra en base de datos entrara aca y lo enviara al usuario
   if(dbGames){
     return res.status(200).json(dbGames)
-  }
+  }}
 
+  //si no encuentra ese id en base de datos la buscara en la api
     const api = await axios.get(`${URL_NAME}/${id}?key=${API_KEY}`);
     if (!api) {
       throw new Error(`error: ${id} Not found`);
