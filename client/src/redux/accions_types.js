@@ -1,3 +1,8 @@
 export const GET_VIDEOGAMES = "GET_VIDEOGAMES"
 export const ID_VIDEOGAMES = "ID_VIDEOGAMES"
 export const GET_GENRES = "GET_GENRES"
+export const SEARCH= "SEARCH"
+export const ORDER = "ORDER"
+export const RATING = "RATING"
+export const FILTER_GENRES="FILTER_GENRES"
+export const FILTER_PLATFORM = "FILTER_PLATFORM"

@@ -1,4 +1,4 @@
-import {GET_GENRES, GET_VIDEOGAMES, ID_VIDEOGAMES} from "./accions_types"
+import {SEARCH, GET_GENRES, GET_VIDEOGAMES, ID_VIDEOGAMES, ORDER, RATING, FILTER_GENRES, FILTER_PLATFORM} from "./accions_types"
 import axios from "axios"
 
 const URL = `http://localhost:3001/videogames`;
@@ -40,4 +40,37 @@ export const getGenres = () =>{
             payload: data
         })
     }
+}
+
+export const getSearch = (search) =>{
+
+    return async (dispatch) =>{
+        const dbfilter= await axios.get (`http://localhost:3001/videogames/name?search=${search}`)
+        const data = dbfilter.data.sendGame
+        return dispatch({
+            type: SEARCH,
+            payload: data
+        }
+        )
+    }
+}
+
+export const getOrder = (order) =>{
+    return{type:ORDER, payload:order}
+
+}
+
+export const ratindord = (rating) =>{
+    return{type:RATING, payload:rating}
+
+}
+
+export const filterGenres = (genre) =>{
+    return{type:FILTER_GENRES, payload:genre}
+
+}
+
+export const filterPlatform = (platform) =>{
+    return{type:FILTER_PLATFORM, payload:platform}
+
 }

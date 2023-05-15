@@ -49,7 +49,7 @@ const getGameById = async (req, res) => {
       image: game.background_image,
       rating: game.rating,
     };
-    return res.status(200).json({ gameid });
+    return res.status(200).json( gameid );
   } catch (error) {
     return error.message.includes("games")
       ? res.status(404).json("error: es 404")

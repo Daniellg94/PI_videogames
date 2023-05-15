@@ -9,14 +9,16 @@ const Detail = () =>{
     const dispatch= useDispatch()
     let {id} = useParams()
 
-    const {gameid} = useSelector(state=>state.videogame)
+    const gameid = useSelector(state=>state.videogame)
 
-    useEffect(()=>{ console.log(id)
+    console.log(gameid)
+
+    useEffect(()=>{ 
         dispatch(getGamesId(id))
     },[id])
 
-    const platforms =gameid?.platforms.map(plat=> plat.name)
-    const genres =gameid?.genres.map(plat=> plat.name)
+    const platforms =gameid.platforms?.map(plat=> plat.name)
+    const genres =gameid.genres?.map(plat=> plat.name)
     const platformsjoin = platforms?.join(', ')
     const genresjoin = genres?.join(', ')
     

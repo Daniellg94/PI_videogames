@@ -30,12 +30,17 @@ const getGameByName = async(req,res) => {
                     id:plat.platform.id,
                     name:plat.platform.name}}),
                 image: game.background_image,
-                rating: game.rating
+                rating: game.rating,
+                genres: game.genres.map((gen) => {
+                    return {
+                      id: gen.id,
+                      name: gen.name}})
+                
             }
         })
         const allgames = dbGames.concat(games)
         const sendGame = allgames.slice(0,15)
-    return res.status(200).json({games:sendGame})
+    return res.status(200).json({sendGame})
         
     } catch (error) {
         return error.message.includes('SEARCH')

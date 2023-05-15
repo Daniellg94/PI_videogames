@@ -34,7 +34,7 @@ module.exports = (sequelize) => {
    },
    rating:{
     type: DataTypes.FLOAT,
-
+    allowNull: false
    }
   },{timestamps:false});
 };

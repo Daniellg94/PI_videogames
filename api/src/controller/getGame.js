@@ -6,41 +6,53 @@ const { Genres, Videogame } = require("../db");
 
 const getGame = async (req, res) => {
   try {
-    //trae todos los juegos encontrados en la base de datos
-    const allDbGames = await Videogame.findAll();
+    const allDbGames = await Videogame.findAll({ include: Genres });
 
-    //trae todos los juegos encontrados en la api
-    const apiGame = await axios(`${URL}${API_KEY}`);
-    const games = apiGame.data.results.map((game) => {
-      return {
-        id: game.id,
-        name: game.name,
-        released: game.released,
-        descriotion: game.description,
-        platforms: game.parent_platforms.map((plat) => {
-          return {
-            id: plat.platform.id,
-            name: plat.platform.name,
-          };
-        }),
-        image: game.background_image,
-        rating: game.rating,
-        genres: game.genres.map((gen)=>{
-          return {
-            name:gen.name
-          }
-        })
-      };
-    });
-    // concatena los juegos en la base de datos con los juegos en la api
+    const apiPromises = [];
+    const totalPages = 5; // Número total de páginas que deseas obtener
+
+    for (let page = 1; page <= totalPages; page++) {
+      apiPromises.push(axios(`${URL}${API_KEY}&page=${page}`));
+    }
+
+    const apiResponses = await Promise.all(apiPromises);
+
+    const games = apiResponses.reduce((accumulator, response) => {
+      const responseData = response.data.results.map((game) => {
+        return {
+          id: game.id,
+          name: game.name,
+          released: game.released,
+          description: game.description,
+          platforms: game.parent_platforms.map((plat) => {
+            return {
+              id: plat.platform.id,
+              name: plat.platform.name,
+            };
+          }),
+          image: game.background_image,
+          rating: game.rating,
+          genres: game.genres.map((gen) => {
+            return {
+              name: gen.name,
+            };
+          }),
+        };
+      });
+
+      return accumulator.concat(responseData);
+    }, []);
+
     const getAllGames = allDbGames.concat(games);
-    // si no se encuentra nada deve dar este error
-    if (!getAllGames) return res.status(400).json({ error: "hay un problema revisa tu base de datos y tu api" });
-    // retorna todos los juegos 
+
+    if (!getAllGames.length) {
+      return res.status(400).json({ error: "No se encontraron juegos." });
+    }
+
     return res.status(200).json(getAllGames);
   } catch (error) {
-    console.log("no entre");
-    return res.status(500).json({ error: error.mesage });
+    console.log("Ocurrió un error:", error);
+    return res.status(500).json({ error: "Ocurrió un error en el servidor." });
   }
 };
 

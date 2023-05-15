@@ -1,7 +1,10 @@
-.cardscontainer{
-    background-color: blue;
+.cardscontainer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap:1rem;
-}
+    justify-content: center; /* Centra horizontalmente los elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+    gap: 1rem;
+    border: black 2px solid;
+    border-radius: 15px;
+  }

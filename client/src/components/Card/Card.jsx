@@ -6,10 +6,10 @@ const Card = (props) => {
     const id = props.id
     return(
         <div className={styles.card}>
-        <Link to = {`/Detail/${id}`}>
+        <Link to = {`/Detail/${id}`}>       
         <p>{props.name}</p>
         <p>{genresString}</p>
-        <p>rating:{props.rating}</p></Link>
+        <p>rating:{props.rating}</p> </Link>
         <img src={props.image} alt='' />
         </div>
     )
