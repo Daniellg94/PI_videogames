@@ -13,10 +13,19 @@ const Nav = () =>{
     }
 
     return(
-        <div className={styles.Navcont}>
-            <button onClick={homehandler}><Link to = "/home" onChange={homehandler}>Home</Link></button>
-            <button><Link to = "/Form">Form</Link></button>
-            <SearchBar/>
+        <div className={styles.navBar}>
+            <div className={styles.navButtons}>
+            <Link to = "/" ><button className={styles.navButton}>
+                Inicio
+                </button></Link>
+            <Link to = "/home" onChange={homehandler} ><button onClick={homehandler} className={styles.navButton}>
+                Home
+                </button></Link>
+                <Link to = "/Form" className={styles.navLink}><button className={styles.navButton}>
+                Form
+                </button></Link>          
+            </div>
+            <SearchBar className={styles.searchBar}/>
         </div>
     )
 

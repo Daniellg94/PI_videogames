@@ -13,8 +13,8 @@ const getGameByName = async(req,res) => {
     //busca en la base de datos los atributos por nombre 
     const dbGames = await Videogame.findAll({
         attributes: ["id", "name","released","description","platforms","image","rating"],
-        where:{name:{[Op.like]:`%${search}%`}},
-        //include:Genres,
+        where:{name:{[Op.iLike]:`%${search}%`}},
+        include:Genres,
     })
    
     const api = await axios.get(`${URL_NAME}${API_KEY}&search=${search}`)

@@ -1,0 +1,176 @@
+.fondo{
+  position: flex;
+}
+
+.buttons{
+    position: flex;
+    align-items: center;
+    top: 15px;
+}
+
+.error{
+    color: crimson;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.Form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    background-color: rgba(109, 109, 109, 0.486);
+    border-radius: 15px;
+    width: 800px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    box-shadow: 0 0 10px rgba(17, 243, 9, 0.788), 0 0 1px rgba(47, 136, 44, 0.788);
+  }
+  
+  .Form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  .Form input[type=number],
+  .Form input[type="text"],
+  .Form input[type="date"]{
+    width: 300px;
+    height: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #77777742;
+    color:white;
+    background-color: rgba(92, 89, 89, 0.534);
+  }
+  .Form textarea{
+    width: 300px;
+    height: 200px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #77777742;
+    color:white;
+    background-color: rgba(92, 89, 89, 0.534);
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  .Form select {
+    width: 300px;
+    height: 50px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #77777742;
+    color:white;
+    background-color: rgba(92, 89, 89, 0.534);
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .Form textarea {
+    height: 100px;
+  }
+  
+  .Form button {
+    width: 200px;
+    height: 40px;
+    margin-top: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .Form button:hover {
+    background-color: #45a049;
+  }
+  
+  .Form button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+
+.add{
+    max-width: 1000px;
+    max-height: 300px;
+    width: 500px;
+    height: 220px;
+    background-color: rgba(88, 88, 88, 0.39);
+    border-radius: 15px;
+    display:inline-flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(17, 243, 9, 0.788), 0 0 1px rgba(47, 136, 44, 0.788);
+}
+
+.add button{
+    width: 25px;
+    height: 25px;
+    margin-top: 2px ;
+    background-color: rgba(253, 0, 0, 0.397);
+}
+
+.card{ 
+    background-color: rgba(66, 66, 66, 0.342);
+    max-width: 100px;
+    height: relative;
+    width: relative;
+    border-radius: 5px;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(17, 243, 9, 0.788), 0 0 1px rgba(47, 136, 44, 0.788);
+}
+
+.buttons{
+  width: 500px;
+  position: absolute;
+  left: 38%;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 10px; 
+}
+
+.buttons button{
+  background-color: rgba(138, 133, 133, 0.418);
+  border: none;
+  border-radius: 5px;
+  height: 30px;
+  width: 120px;
+  transition: 0.6s;
+}
+
+.buttons button:hover{
+  scale: 1.2;
+  background-color: #45a04977;
+}
+
+.img1{
+  position: absolute;
+  z-index: -1;
+  top: 10%;
+  left: 0%;
+}
+
+.img2{
+  max-width: 1000px; /* Establece el ancho máximo permitido */
+  max-height: 300px; /* Establece la altura máxima permitida */
+  width: auto; /* Permite que el ancho se ajuste automáticamente dentro del límite máximo */
+  height: auto; /* Permite que la altura se ajuste automáticamente dentro del límite máximo */
+  position: absolute;
+  top: 10%;
+  left: 77%;
+  z-index: -1;
+}
+.img2 img {
+  width: 100%; /* La imagen se ajustará al ancho del contenedor */
+  height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
+}

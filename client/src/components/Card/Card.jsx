@@ -6,11 +6,16 @@ const Card = (props) => {
     const id = props.id
     return(
         <div className={styles.card}>
-        <Link to = {`/Detail/${id}`}>       
+        
+        <Link to = {`/Detail/${id}`}> 
+        <p><img src={props.image} alt='ruta de la imagen' /></p> 
+        <footer>
         <p>{props.name}</p>
         <p>{genresString}</p>
-        <p>rating:{props.rating}</p> </Link>
-        <img src={props.image} alt='' />
+        <p>⭐{props.rating}</p>     
+        </footer>  
+        </Link>
+        
         </div>
     )
 }

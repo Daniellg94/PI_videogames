@@ -1,0 +1,81 @@
+
+.landing{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    overflow: hidden; /* Oculta el contenido que se desborde */
+    white-space: nowrap;
+    align-items: flex-end;
+}
+
+html{
+height: cover;
+}
+
+.img1{
+    position:fixed;
+    bottom: -5px;
+    left: 5px;
+    padding-right: 20px;
+}
+
+.img2{
+    position:fixed;
+    bottom: -5px;
+    right: 5px;
+    padding-left: 20px;
+}
+
+.img3{
+    max-width: 200px; /* Establece el ancho máximo permitido */
+    max-height: 200px; /* Establece la altura máxima permitida */
+    width: auto; /* Permite que el ancho se ajuste automáticamente dentro del límite máximo */
+    height: auto; /* Permite que la altura se ajuste automáticamente dentro del límite máximo */
+    position: fixed;
+    top: 5px;
+    left: 50%;
+}
+.img3 img {
+    width: 100%; /* La imagen se ajustará al ancho del contenedor */
+    height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
+  }
+
+  .landing button {
+    position: absolute;
+    background-color: rgba(12, 236, 12, 0.397);
+    bottom: 30%;
+    left: 45%;
+    height: 300px;
+    width: 300px;
+    border-radius: 100%;
+    border: none;
+    font-size: 3rem;
+    z-index: 1;
+    transform-origin: center;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+  }
+  
+  .landing button:hover {
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1); /* Tamaño inicial */
+    }
+    60% {
+      transform: scale(1.2); /* Tamaño máximo durante la animación */
+    }
+    100% {
+      transform: scale(1); /* Volver al tamaño original */
+    }
+  } 
+
+.landing a {
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+  }
+
+  

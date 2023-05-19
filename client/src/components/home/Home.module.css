@@ -1,0 +1,150 @@
+/* Estilos para el container principal */
+body{
+  height: cover;
+}
+.container {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Estilos para el contenedor de las tarjetas */
+
+
+/* Estilos para los botones */
+.buttons {
+  padding-top: 3rem;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: flex-start; /* O ajusta según la dirección deseada */
+  gap: 10px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Estilos para los botones individuales */
+.buttons button {
+  background-color: rgba(173, 173, 173, 0.459);
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  position:center;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  margin-bottom: 0px;
+  gap: 10px;
+  animation: slideIn 1s ease-out;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  color: rgb(255, 255, 255) ;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(+100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+
+/* Estilos para el hover de los botones */
+.buttons button:hover {
+  background-color: #03fd5670;
+  transform: scale(1.1);
+  display: flex;
+  justify-content: center;
+}
+.dropdownContent{
+  margin: 0px;
+}
+
+.dropdownContent button{
+  background-color: rgba(83, 83, 83, 0.459);
+  animation: slideIn 1s ease-out;
+}
+
+.img1{
+  position: absolute;
+  max-width: 300px;
+  max-height: 300px;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  left: 400px;
+  top: -10px;
+}
+
+.img1 img {
+  width: 100%; /* La imagen se ajustará al ancho del contenedor */
+  height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
+}
+
+.img2{
+  position: absolute;
+  max-width: 300px;
+  max-height: 300px;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  bottom: -400px;
+  right: 30px;
+}
+
+.img2 img {
+  width: 100%; /* La imagen se ajustará al ancho del contenedor */
+  height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
+}
+
+
+.img3{
+  position: absolute;
+  max-width: 300px;
+  max-height: 300px;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  right: 300px;
+  top: 0px;
+}
+
+.img3 img {
+  width: 100%; /* La imagen se ajustará al ancho del contenedor */
+  height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
+}
+
+.img4{
+  position: absolute;
+  max-width: 300px;
+  max-height: 300px;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  left: 400px;
+  top: 500px;
+}
+
+.img4 img {
+  width: 100%; /* La imagen se ajustará al ancho del contenedor */
+  height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
+}
+
+.img5{
+  position: absolute;
+  max-width: 300px;
+  max-height: 300px;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  right: 400px;
+  top: 300px;
+}
+
+.img5 img {
+  width: 100%; /* La imagen se ajustará al ancho del contenedor */
+  height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
+}

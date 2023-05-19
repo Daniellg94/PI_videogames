@@ -28,10 +28,11 @@ const rootReducer = (state = initialState, action) => {
       return { ...state, genres: action.payload };
 
     case SEARCH:
-      return { ...state, videogames: action.payload };
+      return { ...state, videogames: action.payload, filtrado: [] };
 
     case ORDER:
       const gamesOrd = [...state.videogames];
+      const filterOrd =[...state.filtrado]
       return {
         ...state,
         videogames:
@@ -40,11 +41,12 @@ const rootReducer = (state = initialState, action) => {
             : gamesOrd.sort((a, b) => b.name.localeCompare(a.name)),
         filtrado:
           action.payload === "A"
-            ? gamesOrd.sort((a, b) => a.name.localeCompare(b.name))
-            : gamesOrd.sort((a, b) => b.name.localeCompare(a.name)),
+            ? filterOrd.sort((a, b) => a.name.localeCompare(b.name))
+            : filterOrd.sort((a, b) => b.name.localeCompare(a.name)),
       };
     case RATING:
       const gameRating = [...state.videogames];
+      const filterRat =[...state.filtrado]
       return {
         ...state,
         videogames:
@@ -53,8 +55,8 @@ const rootReducer = (state = initialState, action) => {
             : gameRating.sort((a, b) => b.rating - a.rating),
         filtrado:
           action.payload === "5"
-            ? gameRating.sort((a, b) => a.rating - b.rating)
-            : gameRating.sort((a, b) => b.rating - a.rating),
+            ? filterRat.sort((a, b) => a.rating - b.rating)
+            : filterRat.sort((a, b) => b.rating - a.rating),
       };
     case FILTER_GENRES:
       const filtergen = state.videogames.filter((game) => {

@@ -1,7 +1,8 @@
 import { useState } from "react"
 import { useDispatch } from "react-redux"
 import { getSearch } from "../../redux/actions"
-
+import { Link } from "react-router-dom"
+import styles from "./SearchBar.module.css"
 
 const SearchBar = () =>{
 
@@ -13,9 +14,9 @@ const [search, setSearch] = useState("")
     }
 
     return(
-        <div>
+        <div className="">
             <input type='search' onChange={(event)=>setSearch(event.target.value)} value={search} />
-         <button onClick={handlesearch}>Buscar</button>
+         <Link to ={"/home"}><button onClick={handlesearch}>Buscar</button> </Link>
         </div>
     )
 }
