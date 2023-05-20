@@ -19,7 +19,7 @@ const Detail = () =>{
 
     useEffect(()=>{ 
         dispatch(getGamesId(id))
-    },[id])
+    },[dispatch, id])
 
     const platforms =gameid.platforms?.map(plat=> plat.name)
     const genres =gameid.genres?.map(plat=> plat.name)
