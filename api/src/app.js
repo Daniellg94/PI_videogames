@@ -16,7 +16,7 @@ server.use(cookieParser());
 server.use(morgan('dev'));
 server.use((req, res, next) => {
   const allowedOrigins = [
-   `https://danielpivideogames.netlify.app/`,
+   `https://danielpivideogames.netlify.app`,
     'http://localhost:3000' // Agrega la segunda página permitida aquí
   ]
   const origin = req.headers.origin
