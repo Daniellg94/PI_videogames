@@ -18,7 +18,7 @@ const Nav = () =>{
             <Link to = "/" ><button className={styles.navButton}>
                 Inicio
                 </button></Link>
-            <Link to = "/home" onChange={homehandler} ><button onClick={homehandler} className={styles.navButton}>
+            <Link to = "/home"  ><button onClick={homehandler} className={styles.navButton}>
                 Home
                 </button></Link>
                 <Link to = "/Form" className={styles.navLink}><button className={styles.navButton}>

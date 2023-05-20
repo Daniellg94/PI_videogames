@@ -3,8 +3,10 @@ import axios from "axios"
 
 const URL = `http://localhost:3001/videogames`;
 
+let variable = true
+
 export const getGames = ()=>{
-    
+    if(variable === true){
     return async (dispatch)=>{
         const apiData = await axios.get(URL)
         const data = apiData.data
@@ -14,11 +16,17 @@ export const getGames = ()=>{
                 payload: data            
             }
         )
-}
+}}
+else {variable=true
+return {
+    type:GET_VIDEOGAMES,
+    payload: []            
+}}
 }
 
 export const getGamesId = (id) =>{
 
+    
     return async (dispatch) =>{
         const apiDataId= await axios.get (`http://localhost:3001/videogames/${id}`)
         const data = apiDataId.data
@@ -43,7 +51,7 @@ export const getGenres = () =>{
 }
 
 export const getSearch = (search) =>{
-
+    variable=false
     return async (dispatch) =>{
         const dbfilter= await axios.get (`http://localhost:3001/videogames/name?search=${search}`)
         const data = dbfilter.data.sendGame

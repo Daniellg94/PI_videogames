@@ -41,7 +41,7 @@ html{
     gap: 10px;
   }
   
-  .pagination button {
+  .paginationbuton {
     background-color: #0b57014d;
     border: none;
     border-radius: 5px;
@@ -54,4 +54,18 @@ html{
     background-color: #00ff407a;
     transform: scale(1.2);
   }
+
+  .active{
+    transform: scale(1.2);
+    background-color: #1eff00be;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    padding: 8px 16px;
+  }
+
+  
+ 
+  
+
   

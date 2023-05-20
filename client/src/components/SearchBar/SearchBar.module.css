@@ -1,0 +1,31 @@
+body{
+    width: 99%;
+}
+
+.search{
+    background-color: rgba(128, 255, 0, 0.479);
+    height: 30px;
+    width: 420px;
+    border-bottom-left-radius: 30px;
+    text-align: right;
+}
+
+.search input{
+    height: 100%;
+    width: 310px;
+    border: none;
+    border-start-start-radius: 15px;
+    border-end-start-radius: 15px;
+    padding-left: 10px
+}
+
+.search button{
+    height: 100%;
+    border: none;
+    
+}
+
+.search button:hover{
+    scale: 1.1;
+    background-color: rgba(4, 173, 41, 0.795);;
+}

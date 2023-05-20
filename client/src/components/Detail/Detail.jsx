@@ -5,6 +5,8 @@ import { getGamesId } from "../../redux/actions"
 import { useSelector } from "react-redux"
 import styles from "./Detail.module.css"
 import estrella from "./estrella.png"
+import Link from "./Link.png"
+import Hey from "./Hey.png"
 
 const Detail = () =>{
 
@@ -49,8 +51,9 @@ const Detail = () =>{
             </div>
             
             </div>
-
-        </div>
+            <div className={styles.img1}><img src={Link} alt="" /></div>
+            <div className={styles.img2}><img src={Hey} alt="" /></div>
+            </div>
     )
 
 

@@ -14,9 +14,9 @@ const Home = () =>{
 
     const dispatch = useDispatch()
 
-    /*useEffect(()=>{
-        dispatch(getGames())
-    },[dispatch])*/
+    useEffect(()=>{
+      dispatch(getGames())
+    },[dispatch])
 
     const hendlerOrder = (event)=>{
         dispatch(getOrder(event.target.value))

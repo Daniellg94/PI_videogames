@@ -1,6 +1,7 @@
 /* Estilos para el container principal */
 body{
   height: cover;
+  width: 100%;
 }
 .container {
   display: flex;
@@ -34,6 +35,7 @@ body{
   justify-content: center;
   align-items: center;
   width: 130px;
+  height: 30px;
   margin-bottom: 0px;
   gap: 10px;
   animation: slideIn 1s ease-out;

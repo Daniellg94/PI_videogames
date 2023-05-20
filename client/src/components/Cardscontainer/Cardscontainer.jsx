@@ -49,6 +49,7 @@ const CardsContainer = () => {
         <button
           onClick={() => handlePageChange(currentPage - 1)}
           disabled={currentPage === 1}
+          className={styles.paginationbuton}
         >
           Anterior
         </button>
@@ -57,7 +58,7 @@ const CardsContainer = () => {
           <button
             key={index + 1}
             onClick={() => handlePageChange(index + 1)}
-            className={currentPage === index + 1 ? "active" : ""}
+            className={`${currentPage === index + 1 ? styles.active : styles.paginationbuton}`}
           >
             {index + 1}
           </button>
@@ -66,6 +67,7 @@ const CardsContainer = () => {
         <button
           onClick={() => handlePageChange(currentPage + 1)}
           disabled={currentPage === Math.ceil(gamesToDisplay.length / gamesPerPage)}
+          className={styles.paginationbuton}
         >
           Siguiente
         </button>
