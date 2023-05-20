@@ -55,6 +55,7 @@ export const getSearch = (search) =>{
     return async (dispatch) =>{
         const dbfilter= await axios.get (`${URL}/name?search=${search}`)
         const data = dbfilter.data.sendGame
+        variable= true
         return dispatch({
             type: SEARCH,
             payload: data
