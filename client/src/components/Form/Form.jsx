@@ -7,7 +7,6 @@ import styles from "./Form.module.css"
 import { Link } from "react-router-dom";
 import Ada from "./Ada.png"
 import Big from "./Big.png"
-import { getGames } from "../../redux/actions";
 
 export const Platforms=[
   {name:"Xbox",id:3},{name:"PlayStation",id:2},
@@ -120,11 +119,6 @@ const Form = () =>{
         }));
       };
 
-      const dispach = useDispatch()
-    const homehandler = () => {
-        dispach(getGames())
-    }
-
    
 
       const handleSubmit = (event) => {
@@ -135,7 +129,7 @@ const Form = () =>{
         axios.post(postGame, newGame)
           .then((res) => alert('¡El juego se ha creado exitosamente!'))
           
-          .catch((error) => alert(error));
+          .catch((error) => alert("el juego ya existe"));
 
       }
     
@@ -143,7 +137,7 @@ const Form = () =>{
 
         <div className={styles.fondo}>
           <div className={styles.buttons}>
-          <Link to="/home"><button onClick={homehandler}>Home</button></Link>
+          <Link to="/home"><button >Home</button></Link>
           <Link to="/"><button>inicio</button></Link>
           </div> 
         <form onSubmit={handleSubmit} className={styles.Form}>

@@ -10,7 +10,7 @@ const postNew = async(req,res) => {
             return res.status(401).json({error:"falta algo"})
         }
        // encuentra coincidencias de nombre y de fecha para ver si se perimite crear
-        const gameFind = await Videogame.findOne( {where:{name,released}} );
+        const gameFind = await Videogame.findOne( {where:{name}} );
         if(gameFind)return res.status(400).json({error:'este juego ya existe'});
         // se crea un nuevo videojuego con los parametros pedidos
         const newGame = await Videogame.create({name,description,platforms,image,released,rating})

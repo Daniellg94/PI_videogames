@@ -7,6 +7,7 @@
     overflow: hidden; /* Oculta el contenido que se desborde */
     white-space: nowrap;
     align-items: flex-end;
+  
 }
 
 html{
@@ -54,6 +55,7 @@ height: cover;
     z-index: 1;
     transform-origin: center;
     font-family: 'Yanone Kaffeesatz', sans-serif;
+    box-shadow: 0 0 15px rgba(17, 243, 9, 0.788), 0 0 5px rgba(47, 136, 44, 0.788);
   }
   
   .landing button:hover {
