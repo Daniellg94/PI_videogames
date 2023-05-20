@@ -124,7 +124,7 @@ const Form = () =>{
       const handleSubmit = (event) => {
         
       
-        const postGame = 'http://localhost:3001/videogames';
+        const postGame = 'https://daniel-vidoegames-pi-back.onrender.com/videogames';
   
         axios.post(postGame, newGame)
           .then((res) => alert('¡El juego se ha creado exitosamente!'))

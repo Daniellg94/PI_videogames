@@ -1,7 +1,7 @@
 import {SEARCH, GET_GENRES, GET_VIDEOGAMES, ID_VIDEOGAMES, ORDER, RATING, FILTER_GENRES, FILTER_PLATFORM} from "./accions_types"
 import axios from "axios"
 
-const URL = `http://localhost:3001/videogames`;
+const URL = `https://daniel-vidoegames-pi-back.onrender.com/videogames`;
 
 let variable = true
 
@@ -28,7 +28,7 @@ export const getGamesId = (id) =>{
 
     
     return async (dispatch) =>{
-        const apiDataId= await axios.get (`http://localhost:3001/videogames/${id}`)
+        const apiDataId= await axios.get (`${URL}/${id}`)
         const data = apiDataId.data
         return dispatch ({
             type:ID_VIDEOGAMES,
@@ -41,7 +41,7 @@ export const getGamesId = (id) =>{
 export const getGenres = () =>{
 
     return async (dispatch) =>{
-        const dbgenres = await axios.get( `http://localhost:3001/genres`)
+        const dbgenres = await axios.get( `https://daniel-vidoegames-pi-back.onrender.com/genres`)
         const data = dbgenres.data
         return dispatch({
             type: GET_GENRES,
@@ -53,7 +53,7 @@ export const getGenres = () =>{
 export const getSearch = (search) =>{
     variable=false
     return async (dispatch) =>{
-        const dbfilter= await axios.get (`http://localhost:3001/videogames/name?search=${search}`)
+        const dbfilter= await axios.get (`${URL}name?search=${search}`)
         const data = dbfilter.data.sendGame
         return dispatch({
             type: SEARCH,
