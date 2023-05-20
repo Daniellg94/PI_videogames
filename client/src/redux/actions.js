@@ -53,7 +53,7 @@ export const getGenres = () =>{
 export const getSearch = (search) =>{
     variable=false
     return async (dispatch) =>{
-        const dbfilter= await axios.get (`${URL}name?search=${search}`)
+        const dbfilter= await axios.get (`${URL}/name?search=${search}`)
         const data = dbfilter.data.sendGame
         return dispatch({
             type: SEARCH,
