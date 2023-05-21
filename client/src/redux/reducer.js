@@ -19,7 +19,7 @@ const initialState = {
 const rootReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_VIDEOGAMES:
-      return { ...state, videogames: action.payload, filtrado: [] };
+      return { ...state, videogames: action.payload, filtrado: []};
 
     case ID_VIDEOGAMES:
       return { ...state, videogame: action.payload };

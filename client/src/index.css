@@ -8,23 +8,23 @@
   --background: linear-gradient(0deg, rgba(0,78,4,0.989233193277311) 0%, rgba(0,70,29,1) 10%, rgba(0,2,31,1) 29%);
 }
 
-html {
-  height: cover;
+html{
+  height: 100%;
+  transition: background-color 0.8s ease;
 }
 
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
- background: var(--background);
- background-repeat: no-repeat;
- background-size: cover;
- transition: background-color 0.8s ease;
- /*background-attachment: fixed;*/
+  background: var(--background);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 99%;
+  height: 100%;
+  transition: background-color 0.8s ease;
+  background-attachment: fixed;
 }
 
 code {

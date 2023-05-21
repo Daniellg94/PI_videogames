@@ -81,8 +81,8 @@ return (
           </div>
         )}
 
-      <button value="A" onClick={hendlerOrder}>acendente</button>
-      <button value="Z" onClick={hendlerOrder}>decendente</button>
+      <button value="A" onClick={hendlerOrder}>A - Z</button>
+      <button value="Z" onClick={hendlerOrder}>Z - A</button>
       <button value="0" onClick={handlerRating}>Rating up</button>
       <button value="5" onClick={handlerRating}>Rating down</button>
       
