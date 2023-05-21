@@ -63,7 +63,7 @@ box-shadow: 0 30px 50px -20px rgba(0, 255, 64, 0.664);
     padding-left: 14rem;
     padding-right: 3rem;
     background: linear-gradient(135deg, #70707070, #1b1b1b70);
-    width: 55vw;
+    width: 54vw;
     height: auto;
     align-self: auto;
     border-top-right-radius: 3rem;
@@ -82,7 +82,7 @@ box-shadow: 0 30px 50px -20px rgba(0, 255, 64, 0.664);
 .platforms{
     position: absolute;
     top: 17%;
-    left: 53%;
+    left: 56%;
     color: rgb(255, 255, 255);
     background: linear-gradient(135deg, #70707070, #1b1b1b70);
     padding-left: 2rem;
