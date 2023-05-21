@@ -7,6 +7,7 @@ import {
   RATING,
   FILTER_GENRES,
   FILTER_PLATFORM,
+  COPIAR,
 } from "./accions_types";
 
 const initialState = {
@@ -74,6 +75,8 @@ const rootReducer = (state = initialState, action) => {
           ...state,
           filtrado: filterPlatforms
         };
+      case COPIAR:
+        return{...state}
 
     default:
       return { ...state };

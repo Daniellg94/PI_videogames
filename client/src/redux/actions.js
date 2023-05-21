@@ -1,4 +1,4 @@
-import {SEARCH, GET_GENRES, GET_VIDEOGAMES, ID_VIDEOGAMES, ORDER, RATING, FILTER_GENRES, FILTER_PLATFORM} from "./accions_types"
+import {SEARCH, GET_GENRES, GET_VIDEOGAMES, ID_VIDEOGAMES, ORDER, RATING, FILTER_GENRES, FILTER_PLATFORM, COPIAR} from "./accions_types"
 import axios from "axios"
 
 const URL = `https://daniel-vidoegames-pi-back.onrender.com/videogames`;
@@ -19,7 +19,7 @@ export const getGames = ()=>{
 }}
 else {variable=true
 return {
-    type:GET_VIDEOGAMES,       
+    type:COPIAR,  
 }}
 }
 
