@@ -124,7 +124,7 @@ const Form = () =>{
    
 
       const handleSubmit = (event) => {
-        
+        event.preventDefault();
       
         const postGame = 'https://daniel-vidoegames-pi-back.onrender.com/videogames';
   
