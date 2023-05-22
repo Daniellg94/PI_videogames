@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import Ada from "./Ada.png"
 import Big from "./Big.png"
 import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const Platforms=[
   {name:"Xbox",id:3},{name:"PlayStation",id:2},
@@ -208,11 +209,10 @@ const Form = () =>{
           <br />
           <button type="submit" disabled={!newGame.name||!newGame.description||!newGame.image||error.image||error.description||error.platforms||error.genres||error.released} >
           send videogame</button>
-          
+          <ToastContainer autoClose={3000} hideProgressBar newestOnTop closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
         </form>
         <div className={styles.img1} ><img src={Ada} alt="" /></div>
         <div className={styles.img2} ><img src={Big} alt="" /></div>
-        <ToastContainer autoClose={3000} hideProgressBar newestOnTop closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
         </div>
       );
     };
