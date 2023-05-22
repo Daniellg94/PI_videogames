@@ -7,6 +7,7 @@ import styles from "./Form.module.css"
 import { Link } from "react-router-dom";
 import Ada from "./Ada.png"
 import Big from "./Big.png"
+import { ToastContainer, toast } from 'react-toastify';
 
 export const Platforms=[
   {name:"Xbox",id:3},{name:"PlayStation",id:2},
@@ -127,9 +128,9 @@ const Form = () =>{
         const postGame = 'https://daniel-vidoegames-pi-back.onrender.com/videogames';
   
         axios.post(postGame, newGame)
-          .then((res) => alert('¡El juego se ha creado exitosamente!'))
+          .then((res) => toast.success('¡El juego se ha creado exitosamente!'))
           
-          .catch((error) => alert("el juego ya existe"));
+          .catch((error) => toast.error("el juego ya existe"));
 
       }
     
@@ -211,6 +212,7 @@ const Form = () =>{
         </form>
         <div className={styles.img1} ><img src={Ada} alt="" /></div>
         <div className={styles.img2} ><img src={Big} alt="" /></div>
+        <ToastContainer position="top-right" autoClose={3000} hideProgressBar newestOnTop closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
         </div>
       );
     };
