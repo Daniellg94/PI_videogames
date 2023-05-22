@@ -212,7 +212,7 @@ const Form = () =>{
         </form>
         <div className={styles.img1} ><img src={Ada} alt="" /></div>
         <div className={styles.img2} ><img src={Big} alt="" /></div>
-        <ToastContainer position="top-right" autoClose={3000} hideProgressBar newestOnTop closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
+        <ToastContainer autoClose={3000} hideProgressBar newestOnTop closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
         </div>
       );
     };

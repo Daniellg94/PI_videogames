@@ -43,7 +43,9 @@ const getGame = async (req, res) => {
       return accumulator.concat(responseData);
     }, []);
 
-    const getAllGames = allDbGames.concat(games);
+    const reversedGames = allDbGames.reverse();
+
+    const getAllGames = reversedGames.concat(games);
 
     if (!getAllGames.length) {
       return res.status(400).json({ error: "No se encontraron juegos." });
