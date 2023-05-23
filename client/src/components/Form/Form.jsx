@@ -125,15 +125,25 @@ const Form = () =>{
 
       const handleSubmit = (event) => {
         event.preventDefault();
-      
+        
         const postGame = 'https://daniel-vidoegames-pi-back.onrender.com/videogames';
-  
+      
         axios.post(postGame, newGame)
-          .then((res) => toast.success('¡El juego se ha creado exitosamente!'))
-          
-          .catch((error) => toast.error("el juego ya existe"));
-
-      }
+          .then((res) => {
+            toast.success('¡El juego se ha creado exitosamente!');
+            // Restablecer los valores del formulario a su estado inicial
+            setNewGame({
+              name: '',
+              released: '',
+              description: '',
+              rating: 0,
+              platforms: [],
+              genres: [],
+              image: '',
+            });
+          })
+          .catch((error) => toast.error('El juego ya existe'));
+      };
     
       return (
 
