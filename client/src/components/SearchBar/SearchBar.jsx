@@ -16,7 +16,7 @@ const [search, setSearch] = useState("")
     return(
         <div className={styles.search}>
             <input type='search' onChange={(event)=>setSearch(event.target.value)} value={search} />
-         <Link to ={"/home"}><button onClick={handlesearch}>Buscar</button> </Link>
+         <Link to ={"/home"}><button onClick={handlesearch}>Search</button> </Link>
         </div>
     )
 }

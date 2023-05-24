@@ -20,7 +20,9 @@
 .search button{
     height: 100%;
     border: none;
-    
+    background-color: rgb(124, 120, 120);
+    color: white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .search button:hover{
