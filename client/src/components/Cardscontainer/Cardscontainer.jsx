@@ -63,7 +63,7 @@ const CardsContainer = () => {
           disabled={currentPage === 1}
           className={styles.paginationbuton}
         >
-          Anterior
+          Back
         </button>
         {/* Botones de número de página */}
         {Array.from({ length: Math.ceil(gamesToDisplay.length / gamesPerPage) }, (_, index) => (
@@ -81,7 +81,7 @@ const CardsContainer = () => {
           disabled={currentPage === Math.ceil(gamesToDisplay.length / gamesPerPage)}
           className={styles.paginationbuton}
         >
-          Siguiente
+          Next
         </button>
       </div>
     </div>

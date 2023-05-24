@@ -8,6 +8,7 @@ import {
   FILTER_GENRES,
   FILTER_PLATFORM,
   COPIAR,
+  DBGAMES,
 } from "./accions_types";
 
 const initialState = {
@@ -75,6 +76,21 @@ const rootReducer = (state = initialState, action) => {
           ...state,
           filtrado: filterPlatforms
         };
+        case DBGAMES:
+          const uuidRegex = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+          const filterDbGames = state.videogames.filter((game) => {
+          //si es un uuid filtrara todos los que son uuid dentro del array
+          if (uuidRegex.test(action.payload)) {
+          return uuidRegex.test(game.id);
+          // sino no es uuid filtrara todos los que no sean uuid 
+          } else {
+          return !uuidRegex.test(game.id);}});
+          return {
+            ...state,
+            filtrado: filterDbGames
+          };
+      
+
       case COPIAR:
         return{...state}
 
