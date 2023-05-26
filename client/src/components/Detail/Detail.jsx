@@ -15,6 +15,11 @@ const Detail = () =>{
 
     const gameid = useSelector(state=>state.videogame)
 
+    useEffect(()=>{ 
+        return (()=> dispatch(getGamesId()))
+    },[])
+
+
     console.log(gameid)
 
     useEffect(()=>{ 

@@ -25,7 +25,7 @@ return {
 
 export const getGamesId = (id) =>{
 
-    
+    if(id===undefined) return {type:ID_VIDEOGAMES, payload:[]}
     return async (dispatch) =>{
         const apiDataId= await axios.get (`${URL}/${id}`)
         const data = apiDataId.data

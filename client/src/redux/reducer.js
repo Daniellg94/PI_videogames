@@ -82,7 +82,7 @@ const rootReducer = (state = initialState, action) => {
           //si es un uuid filtrara todos los que son uuid dentro del array
           if (uuidRegex.test(action.payload)) {
           return uuidRegex.test(game.id);
-          // sino no es uuid filtrara todos los que no sean uuid 
+          //  no es uuid filtrara todos los que no sean uuid 
           } else {
           return !uuidRegex.test(game.id);}});
           return {

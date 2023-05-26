@@ -4,7 +4,6 @@ import Card from "../Card/Card";
 import styles from "./Cardscontainer.module.css";
 
 const CardsContainer = () => {
-
   //Se utilizan los hooks useSelector para obtener el estado de videogames y 
   //visual desde el store de Redux. videogames representa todos los juegos 
   //disponibles y visual representa los juegos filtrados (si existen).
@@ -28,6 +27,13 @@ const CardsContainer = () => {
   //de los juegos que se mostrarán en la página actual, y extraer los juegos 
   //correspondientes a esa página. El efecto se ejecuta cada vez que currentPage 
   //o gamesToDisplay cambian.
+
+  useEffect(()=>{
+    return(()=>(
+    setCurrentPage(1)))
+  },[gamesToDisplay])
+
+  
   useEffect(() => {
     // Calcula el índice de inicio y final de los juegos que se mostrarán en la página actual
     const indexOfLastGame = currentPage * gamesPerPage;

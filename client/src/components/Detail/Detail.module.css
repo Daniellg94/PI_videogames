@@ -36,7 +36,7 @@ box-shadow: 0 30px 50px -20px rgba(0, 255, 64, 0.664);
     align-content: center;
     color: rgb(255, 255, 255);
     font-family: 'Yanone Kaffeesatz', sans-serif;
-    line-height:0.25;
+    line-height:1;
     border-bottom-right-radius: 3rem;
 }
 
@@ -59,7 +59,7 @@ box-shadow: 0 30px 50px -20px rgba(0, 255, 64, 0.664);
     position: absolute;
     z-index: -1;
     top: 28%;
-    left: 28%;
+    left: 29%;
     padding-left: 12rem;
     padding-right: 3rem;
     background: linear-gradient(135deg, #70707070, #1b1b1b70);
@@ -106,6 +106,8 @@ box-shadow: 0 30px 50px -20px rgba(0, 255, 64, 0.664);
     border-top-left-radius: 3rem;
     box-shadow: 0 30px 50px -20px rgba(0, 255, 64, 0.664);
     animation: fadeInSlide 1s ease-in-out forwards;
+    width: 9rem;
+    height: auto;
 
 }
 
